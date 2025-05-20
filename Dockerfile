@@ -4,11 +4,11 @@ RUN rm /etc/apt/sources.list.d/cuda.list
 
 RUN apt update \ 
     && apt -y install wget \
-    && wget https://github.com/apool-io/apoolminer/releases/download/v2.8.6/apoolminer_linux_qubic_autoupdate_v2.8.6.tar.gz \
-    && tar xvzf apoolminer_linux_qubic_autoupdate_v2.8.6.tar.gz \
-    && rm apoolminer_linux_qubic_autoupdate_v2.8.6.tar.gz \
+    && wget https://github.com/apool-io/apoolminer/releases/download/v2.9.1/apoolminer_linux_qubic_autoupdate_v2.9.1.tar.gz \
+    && tar xvzf apoolminer_linux_qubic_autoupdate_v2.9.1.tar.gz \
+    && rm apoolminer_linux_qubic_autoupdate_v2.9.1.tar.gz \
     && ln -s libnvidia-ml.so.1 /lib/x86_64-linux-gnu/libnvidia-ml.so
 
-WORKDIR /apoolminer_linux_qubic_autoupdate_v2.8.6
+WORKDIR /apoolminer_linux_qubic_autoupdate_v2.9.1
 
 ENTRYPOINT ["./apoolminer"]
